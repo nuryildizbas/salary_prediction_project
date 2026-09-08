@@ -38,3 +38,17 @@ r2 = r2_score(y_test, y_pred)
 
 print("MSE:", mse)
 print("R²:", r2)
+
+
+plt.scatter(y_test, y_pred)
+plt.plot(
+    [y_test.min(), y_test.max()],
+    [y_test.min(), y_test.max()],
+    linestyle="--"
+)
+
+plt.xlabel("Actual Slary")
+plt.ylabel("Predicted Salary")
+plt.title("Predicted vs Actual Salary")
+plt.show()
+
